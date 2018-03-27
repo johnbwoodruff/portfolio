@@ -68,10 +68,42 @@ body {
   opacity: 0;
 }
 
-.section-light {
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   padding: 40px;
+}
+.section.light {
   background-color: #dfe6e9;
   color: rgba(0, 0, 0, 0.8);
+}
+.section.dark {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #dfe6e9;
+}
+
+.subheading {
+  position: relative;
+  line-height: 45px;
+}
+.subheading .line {
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transform-origin: 0 0;
+  bottom: 0;
+}
+
+.center-projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1140px;
 }
 
 .more-button {
@@ -91,28 +123,35 @@ body {
 }
 
 .project-card {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
   background-color: #ffffff;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  width: 350px;
+  width: 320px;
+  margin: 15px;
 }
 
 .project-card > .heading {
-  padding: 60px 50px;
+  height: 130px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   background-color: #00b894;
   color: white;
 }
 .project-card > .heading > h6 {
+  text-align: center;
   font-size: 1.5em;
   margin: 0;
 }
 .project-card > .body {
+  min-height: 60px;
   padding: 20px 10px;
+  flex: 1;
 }
 .project-card > .body > p {
   margin: 0;
@@ -124,6 +163,7 @@ body {
   padding: 10px;
   font-size: 12px;
   display: flex;
+  flex: 0 0 auto;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -137,4 +177,8 @@ body {
 .project-card > .footer i {
   font-size: 15px;
   margin-right: 8px;
+}
+
+.copyright {
+  text-align: center;
 }
