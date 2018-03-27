@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  width: 100%;
   margin: 0;
   font-family: 'PT Mono', monospace;
 }
@@ -128,7 +129,7 @@ body {
   background-color: #ffffff;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  width: 320px;
+  width: 300px;
   margin: 15px;
 }
 
@@ -145,7 +146,7 @@ body {
 }
 .project-card > .heading > h6 {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin: 0;
 }
 .project-card > .body {
@@ -174,11 +175,91 @@ body {
   justify-content: center;
   align-items: center;
 }
+.project-card > .footer a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .project-card > .footer i {
   font-size: 15px;
   margin-right: 8px;
 }
+.project-card > .footer .framework {
+  margin: 0;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.skills .skills-section {
+  flex: 1 0 auto;
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.social-links i {
+  margin: 0 15px;
+  color: #dfe6e9;
+  font-size: 24px;
+}
 
 .copyright {
   text-align: center;
+}
+
+@media (max-width: 1140px) {
+  .center-projects {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero .ml1 {
+    font-size: 3em;
+  }
+  .hero .ml16 {
+    font-size: 1.5em;
+  }
+  .section {
+    padding: 15px;
+  }
+  .subheading {
+    font-size: 1.2em;
+  }
+  .skills {
+    flex-wrap: wrap;
+  }
+  .skills .skills-section {
+    flex: 1 0 100%;
+  }
+}
+@media (max-width: 420px) {
+  .hero .ml1 {
+    font-size: 2.5em;
+  }
+  .hero .ml16 {
+    font-size: 1em;
+  }
+}
+@media (max-width: 350px) {
+  .hero .ml1 {
+    font-size: 2.2em;
+  }
 }

@@ -78,3 +78,8 @@ function animateIntro() {
 setTimeout(function() {
   animateIntro();
 }, 200);
+
+function scrollProjects() {
+  var offset = document.querySelector('.hero').clientHeight - window.scrollY;
+  window.scrollBy({ top: offset, left: 0, behavior: 'smooth' });
+}
