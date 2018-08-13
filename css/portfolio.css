@@ -308,10 +308,14 @@ ul li {
   -ms-flex-align: center;
   align-items: center;
 }
-.social-links i {
+.social-links i,
+.social-links svg {
   margin: 0 15px;
   color: #dfe6e9;
+  fill: #dfe6e9;
   font-size: 24px;
+  height: 24px;
+  width: 24px;
 }
 
 .copyright {
